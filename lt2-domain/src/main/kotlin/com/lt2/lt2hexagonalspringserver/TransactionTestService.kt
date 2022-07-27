@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional
 @ApplicationService
 class TransactionTestService {
 
-    @Transactional(rollbackFor = [RuntimeException::class])
+    @Transactional(readOnly = true)
     fun test() {
         println("test success")
     }
